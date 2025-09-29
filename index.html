@@ -14,6 +14,10 @@
         padding: 0;
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
@@ -331,7 +335,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header id="home">
       <div class="container">
         <nav>
           <div class="logo">
@@ -341,11 +345,16 @@
             <span></span><span></span><span></span>
           </div>
           <div class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
+            <a href="#">Home</a>
             <a href="#servicos">Serviços</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
-            <button class="btn btn-yellow">WhatsApp</button>
+            <button
+              class="btn btn-yellow"
+              onclick="window.open('https://api.whatsapp.com/send?phone=55848441418614&text=Oi,%20tudo%20bem%3F%20Queria%20um%20orçamento%20dos%20serviços%20de%20instalação%20e%20fechaduras.', '_blank')"
+            >
+              WhatsApp
+            </button>
           </div>
         </nav>
       </div>
@@ -384,7 +393,7 @@
           <a
             onclick="window.location.href='tel:+55848441418614'"
             class="btn btn-yellow"
-            >
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -405,8 +414,8 @@
     </section>
 
     <!-- Serviços -->
-    <section id="servicos">
-      <h3 class="nossos-servicos">Nossos Serviços</h3>
+    <section>
+      <h3 id="servicos" class="nossos-servicos">Nossos Serviços</h3>
       <div class="container">
         <div class="servicos">
           <div class="servico">
@@ -509,7 +518,7 @@
         <div>
           <h4>Links Rápidos</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -517,16 +526,25 @@
         </div>
         <div>
           <h4>Contato</h4>
-          <p>📞 (84) 99881-XXXX</p>
+          <p>📞 (84) 4141-8614</p>
           <p>📍 Rua Desembargador Régulo Tinoco, 1265 - Natal/RN</p>
-          <p>✉ contato@fechatudo.com</p>
+          <p>✉ fechatudo@outlook.com.br</p>
         </div>
         <div>
           <h4>Siga-nos</h4>
           <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">WhatsApp</a></li>
+            <li>
+              <a href="https://www.instagram.com/fechatudo_/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send?phone=55848441418614&text=Oi,%20tudo%20bem%3F%20Queria%20um%20orçamento%20dos%20serviços%20de%20instalação%20e%20fechaduras."
+                target="_blank"
+                >WhatsApp</a
+              >
+            </li>
           </ul>
         </div>
       </div>
