@@ -14,6 +14,11 @@
         padding: 0;
         box-sizing: border-box;
       }
+      .hidden-lg {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden;
+      }
       html {
         scroll-behavior: smooth;
       }
@@ -266,6 +271,12 @@
 
       /* Responsivo */
       @media (max-width: 768px) {
+        .hidden-lg {
+          display: block !important;
+          opacity: 1 !important;
+          visibility: visible;
+        }
+
         .nav-links {
           position: absolute;
           top: 60px;
@@ -363,7 +374,10 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <div>
-        <h1>SERVIÇO URGENTE: (84) 4141-8614</h1>
+        <h1>
+          SERVIÇO URGENTE: <br class="hidden-lg" />
+          (84) 4141-8614
+        </h1>
         <h2>CHAVEIRO EMERGENCIAL</h2>
         <p>
           Disponível <b>24 horas</b> por dia, <b>7 dias</b> por semana.
