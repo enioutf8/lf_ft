@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fechatudo - Chaveiro emergencial 24h em Natal e Região. Instalação de fechaduras digitais, cópia de chaves e serviços de segurança."
+    />
+    <title>Fechatudo - Chaveiro 24h em Natal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        color: #333;
+      }
+      header {
+        background: #fff;
+        border-bottom: 3px solid #ffd500;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-right: 50px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 200px;
+        height: 70px;
+      }
+      .logo img {
+        width: 100%;
+        object-fit: contain;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+      .nav-links a:hover {
+        color: #ffd500;
+      }
+      .toggler {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+      }
+      .toggler span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+      }
+
+      /* Hero */
+      .hero {
+        background: #444;
+        background-image: url("./chaveiro.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px !important;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+        color: #ffd500;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        margin-bottom: 20px;
+      }
+      .hero .btns {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        border: none !important;
+        cursor: pointer;
+      }
+      .btn-green {
+        background: #4caf50;
+        color: #fff;
+      }
+      .btn-yellow {
+        background: #ffd500;
+        color: #333;
+      }
+
+      /* Serviços */
+
+      section h3 {
+        text-align: center;
+        font-size: 1.5em !important;
+        color: #4e4e4e;
+        background-color: #ffd500;
+        padding: 20px;
+      }
+      .servicos {
+        display: grid;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 50px;
+        text-align: center;
+      }
+      .servico {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        background: #fff;
+        border: 1px solid rgb(209, 209, 209);
+        height: 150px;
+        border-radius: 10px;
+      }
+      .area-icon-servicess {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+      }
+      .area-icon-servicess img {
+        width: 30%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .servico p {
+        font-weight: 600;
+        color: #494949;
+      }
+
+      /* Produtos */
+
+      /* Sobre */
+      .sobre {
+        background-image: url("./regiao.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 40px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+      .img-area-aten {
+        width: 300px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .img-area-aten img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .sobre div {
+        max-width: 500px;
+      }
+      .sobre button {
+        background: #ffd500;
+        border: none;
+        padding: 12px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      /* Footer */
+      footer {
+        background: #222;
+        color: #ddd;
+        padding: 40px 20px;
+      }
+      footer .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+      footer h4 {
+        color: #ffd500;
+        margin-bottom: 10px;
+      }
+      footer ul {
+        list-style: none;
+      }
+      footer ul li {
+        margin-bottom: 8px;
+      }
+      footer ul li a {
+        text-decoration: none;
+        color: #ddd;
+      }
+      footer ul li a:hover {
+        color: #ffd500;
+      }
+      footer .copy {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background: #fff;
+          flex-direction: column;
+          width: 200px;
+          display: none;
+          padding: 20px;
+          box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .toggler {
+          display: flex;
+        }
+        /* Alterado de 25% para 50% (100% / 2 = 50%) */
+        .produto {
+          min-width: 50%; /* 2 por vez */
+          box-sizing: border-box;
+          padding: 10px;
+          text-align: center;
+          flex-shrink: 0;
+          border: 1px solid black;
+        }
+
+        .servicos {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          gap: 30px;
+          text-align: center;
+        }
+        .servico {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px;
+          background: #fff;
+          border: 1px solid rgb(209, 209, 209);
+          height: 150px;
+          border-radius: 10px;
+          width: 70% !important;
+        }
+        .area-icon-servicess {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100px;
+        }
+        .area-icon-servicess img {
+          width: 20%;
+          height: 100%;
+          object-fit: contain;
+        }
+        .servico p {
+          font-weight: 600;
+          color: #494949;
+        }
+       
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="./logo_large.png" />
+          </div>
+          <div class="toggler" id="toggler">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+            <button class="btn btn-yellow">WhatsApp</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1>SERVIÇO URGENTE: (84) 99881-XXXX</h1>
+        <h2>CHAVEIRO EMERGENCIAL</h2>
+        <p>
+          Disponível <b>24 horas</b> por dia, <b>7 dias</b> por semana.
+          <br />Atendimento rápido em Natal e Região.
+        </p>
+        <div class="btns">
+          <a href="#" class="btn btn-green">FALAR COM CHAVEIRO</a>
+          <a href="#" class="btn btn-yellow">LIGUE JÁ!</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <h3 class="nossos-servicos">Nossos Serviços</h3>
+      <div class="container">
+        <div class="servicos">
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Instalação de Fechaduras Digitais</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Venda de Fechaduras Digitais</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Abertura de Fechaduras</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Troca e Instalação de Fechaduras Comum</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Troca de segredo de Fechaduras Comum</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Cópia e Reprodução de Chaves</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Confecção Rápida e Precisa de Chaves</p>
+          </div>
+          <div class="servico">
+            <div class="area-icon-servicess">
+              <img src="./icon.png" alt="Serviço - Instalação de Fechaduras" />
+            </div>
+            <p>Instalação de Fechaduras com Ponto Eletrônico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+
+    <!-- Sobre -->
+    <section class="sobre" id="sobre">
+      <div class="img-area-aten">
+        <img src="./mapa.png" alt="Foto loja Fechatudo" />
+      </div>
+      <div>
+        <h2>Atendemos a Grande Natal e Região!</h2>
+        <br />
+        <p>
+          Com mais de 10 anos de experiência em Natal e Região, somos
+          especialistas em soluções rápidas e seguras para emergências
+          residenciais, automotivas e comerciais.
+        </p>
+        <p>
+          Nossa missão é oferecer o melhor atendimento 24 horas, garantindo sua
+          tranquilidade e segurança.
+        </p>
+        <br />
+        <hr />
+        <br />
+        <p>
+          <b>Loja Física</b>
+          Rua Desembargador Régulo Tinoco, 1265<br />
+          Barro Vermelho, Natal - RN, 59160-155
+        </p>
+        <button>Marque um orçamento</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+      <div class="container footer-grid">
+        <div>
+          <h4>Sobre Nós</h4>
+          <p>
+            Fechatudo é referência em serviços de chaveiro emergencial e
+            instalação de fechaduras digitais em Natal e Região.
+          </p>
+        </div>
+        <div>
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <p>📞 (84) 99881-XXXX</p>
+          <p>📍 Rua Desembargador Régulo Tinoco, 1265 - Natal/RN</p>
+          <p>✉ contato@fechatudo.com</p>
+        </div>
+        <div>
+          <h4>Siga-nos</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">© 2025 Fechatudo - Todos os direitos reservados.</div>
+    </footer>
+
+    <script>
+      const toggler = document.getElementById("toggler");
+      const navLinks = document.getElementById("navLinks");
+
+      toggler.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
